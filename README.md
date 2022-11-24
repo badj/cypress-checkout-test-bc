@@ -67,11 +67,11 @@ This repo contains Cypress tests for login and cart checkout assertions with the
 
 https://user-images.githubusercontent.com/3204581/203672678-b5509689-fae0-4e53-a980-c43bc7a5c4a2.mp4
 
-5. Successful Run - Video recording with *failed tests retried*
+5. Successful Run - Video recording with *failed test retry*
 
 - *cypress-checkout-test2-e2e-checkout-journey-spec*
 
-https://user-images.githubusercontent.com/3204581/203672395-047c02b2-ac41-4a4d-91f9-3501968dbc35.mp4
+https://user-images.githubusercontent.com/3204581/203673150-3b41a1c1-4a35-4115-8901-07a6696a4715.mp4
 
 6. Successful Run in [Cypress Cloud](https://cloud.cypress.io)
 
