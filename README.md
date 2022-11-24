@@ -116,7 +116,10 @@ e2e: {
 1. Implementing Login and using a cookie to emulate logged on session state.
 2. Implement [cypress-image-compare pixel diff tests](https://www.npmjs.com/package/cypress-image-compare).
 3. [Docker](https://www.docker.com/) containerisation to package the forked ["Automation practice"](http://automationpractice.com/) app into a container allowing Cypress tests to run in and against the local docker instance.
-4. Cypress test kicked off/run with [Jenkins](https://www.jenkins.io/) or [Circle CI](https://circleci.com/).
+4. Cypress test kicked off/run with CI/CD in:
+- [GitHub Actions](https://docs.cypress.io/guides/continuous-integration/github-actions#What-you-ll-learn) or
+- [Jenkins](https://www.jenkins.io/) or
+- [Circle CI](https://circleci.com/)
 5. Database integration to showcase test run setups and tear downs.
 6. Create a [containerised workflow with docker and openshift](https://github.com/OBVIOCO/cypress-checkout-test/new/main?filename=.github%2Fworkflows%2Fopenshift.yml&workflow_template=deployments%2Fopenshift) Or [Azure](https://github.com/OBVIOCO/cypress-checkout-test/new/main?filename=.github%2Fworkflows%2Fazure-webapps-node.yml&workflow_template=deployments%2Fazure-webapps-node) Or [Amazon ECS](https://github.com/OBVIOCO/cypress-checkout-test/new/main?filename=.github%2Fworkflows%2Faws.yml&workflow_template=deployments%2Faws).
 7. [Improve Building the project in NodeJS with npm and grunt](https://github.com/OBVIOCO/cypress-checkout-test/new/main?filename=.github%2Fworkflows%2Fnpm-grunt.yml&workflow_template=ci%2Fnpm-grunt).
