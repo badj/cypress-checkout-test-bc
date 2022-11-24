@@ -84,7 +84,9 @@ https://user-images.githubusercontent.com/3204581/203673150-3b41a1c1-4a35-4115-8
 
 6. Successful Run sample in [Cypress Cloud Runner](https://cloud.cypress.io)
 
-![Test run reported in Cypress Cloud Runner dashboard](Cypress-Cloud.jpg)
+![Test run reported in Cypress Cloud Runner](Cypress-Cloud.jpg)
+
+![Test run - Test results reported in Cypress Cloud Runner](Cypress-Cloud-Test-Results.jpg)
 
 ## Gotchas
 
