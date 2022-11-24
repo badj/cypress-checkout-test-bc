@@ -5,13 +5,18 @@ This repo contains Cypress tests for login and a cart checkout journey with the 
 ## Project information
 ### This project contains two Cypress functional journey tests for multiple specs to verify:
 1. E-commerce store - Checkout Journey in ["Test Automation e-commerce store"](https://testautomation.bigcartel.com/) the test steps showcase:  
-- Searching for the item in the store
-- Viewing the product from the results returned in the search
-- Choosing *colour* option from a dropdown selection
-- Choosing *age* option from a dropdown selection
-- *Increasing the quantity* of items
-- Proceeding to the *cart*
-- Asserting and verifying items added to cart in the checkout cart for: *correct items*, *options selected*, *quantities*, *cart item prices* and *cart totals*.
+- Searching for the item in the store.
+- Viewing the product from the results returned in the search.
+- Choosing *colour* option from a dropdown selection.
+- Choosing *age* option from a dropdown selection.
+- *Increasing the quantity* of items.
+- Proceeding to the *cart*.
+- Asserting and verifying items added to cart in the checkout cart for: 
+  - *correct items*
+  - *options selected*
+  - *quantities*
+  - *cart item prices*
+  - *cart totals*.
 
 ### This project has Cypress configs and code to showcase:
 - The use of *Fixtures* with test data support.
@@ -20,8 +25,8 @@ This repo contains Cypress tests for login and a cart checkout journey with the 
 - *MochAwesome reporter* for test run reporing.
 - Test run *Video with compression* support.
 - *Failed test retry* support.
-- *Skipping tests* support
-- *Multiple specs* run
+- *Skipping tests* support.
+- *Multiple specs* run.
 
 ## Pre-requisites
 1. [NodeJS installed](https://nodejs.org/en/download/).
@@ -37,15 +42,18 @@ This repo contains Cypress tests for login and a cart checkout journey with the 
 - `npm run testWithFF`: To run the tests headed *(with a browser)* in Firefox.
 - `npm run testHeadless`: To run the tests headless *(without a browser)*.
 - `npm run testWithBrowserNoExit`: To run the tests headed and the Cypress runner will remain open after the test run completed *(Test run video will keep recording until Cypress runner is closed/killed!)*.
-5. When the test run completed, a *test results report* will be generated in the `cypress/reports/result.html/index.html` path.
+5. When the test run completed:
+- A *Test results report* will be generated in the `cypress/reports/result.html/index.html` path.
+- All *Video recordings of the runs* will be generated in the `cypress/videos/` path.
+- All *Screenshots* will be generated in the `cypress/screenshots/` path for all test steps set to take screenshots.
 
 ## Expected (Successful - Retried - Skipped) test run samples:
 
-1. Successful Run with `testWithBrowserNoExit`- Cart checkout page in Cypress runner with Electron browser:
+1. Successful Run sample - Cart checkout page in Cypress runner with Electron browser:
 
 ![Cart checkout page in Cypress Electron browser runner with no testWithBrowserNoExit npm run](Cypress_Electron_runner_cart_page.jpg)
 
-2. Successful Run - Terminal/CLI output:
+2. Successful Run sample - Terminal/CLI output:
 
 ![Successful run from Terminal with passed test results output](terminal_cypress1.jpg)
 
@@ -57,19 +65,19 @@ This repo contains Cypress tests for login and a cart checkout journey with the 
 
 ![Successful run from Terminal with passed test results output](terminal_cypress5.jpg)
 
-3. Successful Run - Cypress Test Results from the HTML report with passed test results output:
+3. Successful Run sample - Cypress Test Results from the HTML report with passed test results output:
 
 ![Successful Run - Cypress Test Results HTML report with passed test results output](Cypress_Test_Results_html_report.jpg)
 
-4. Successful Run - Video recordings with no failures *(no test retry)*
+4. Successful Run sample - Video recordings with no failures *(no test retry)*
 
 https://user-images.githubusercontent.com/3204581/203672678-b5509689-fae0-4e53-a980-c43bc7a5c4a2.mp4
 
-5. Successful Run - Video recording with *failed test retry*
+5. Successful Run sample - Video recording with *failed test retry*
 
 https://user-images.githubusercontent.com/3204581/203673150-3b41a1c1-4a35-4115-8901-07a6696a4715.mp4
 
-6. Successful Run in [Cypress Cloud](https://cloud.cypress.io)
+6. Successful Run sample in [Cypress Cloud](https://cloud.cypress.io)
 
 TODO: Cypress-Cloud.jpg here 
 
@@ -89,7 +97,7 @@ Npm install : FetchError: request to http://registry.npmjs.org/... failed, reaso
 - Run `npm config edit` and clear out the `.npmrc` file, save it and clean out the cache with `npm cache clean -f` then re-run `npm install` *or...*
 - Could be a proxy issue in your network that needs to be resolved - [*reference npm config docs to configure proxy settings*](https://docs.npmjs.com/cli/v8/using-npm/config#proxy).
 
-2. Cart page empty on view cart - required the e2e `experimentalSessionAndOrigin` to be set to `false` in *config.js*
+2. Cart page empty on view cart - required the e2e `experimentalSessionAndOrigin` to be set to `false` in *config.js*:
 
 ```js
 // Extract from cypress.config.js (this is already configured by default)
