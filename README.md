@@ -82,11 +82,9 @@ https://user-images.githubusercontent.com/3204581/203672678-b5509689-fae0-4e53-a
 
 https://user-images.githubusercontent.com/3204581/203673150-3b41a1c1-4a35-4115-8901-07a6696a4715.mp4
 
-6. Successful Run sample in [Cypress Cloud](https://cloud.cypress.io)
+6. Successful Run sample in [Cypress Cloud Runner](https://cloud.cypress.io)
 
-TODO: Cypress-Cloud.jpg here
-
-![Test run reported in Cypress Cloud dashboard](Cypress-Cloud.jpg)
+![Test run reported in Cypress Cloud Runner dashboard](Cypress-Cloud.jpg)
 
 ## Gotchas
 
