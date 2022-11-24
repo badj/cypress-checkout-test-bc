@@ -1,6 +1,6 @@
 # E-commerce Checkout Test showcasing [Cypress.io](https://www.cypress.io/) as a Test Framework
 
-This repo contains Cypress tests for login and cart checkout assertions with the ["Test Automation e-commerce store"](https://testautomation.bigcartel.com/) to showcase the Cypress Test Framework.
+This repo contains Cypress tests for login and a cart checkout journey with the ["Test Automation e-commerce store"](https://testautomation.bigcartel.com/) to showcase the Cypress Test Framework.
 
 ## Project information
 ### This project contains two Cypress functional journey tests for multiple specs to verify:
@@ -63,13 +63,9 @@ This repo contains Cypress tests for login and cart checkout assertions with the
 
 4. Successful Run - Video recordings with no failures *(no test retry)*
 
-- *cypress-checkout-test3-all-tests-in-1-spec.cy*
-
 https://user-images.githubusercontent.com/3204581/203672678-b5509689-fae0-4e53-a980-c43bc7a5c4a2.mp4
 
 5. Successful Run - Video recording with *failed test retry*
-
-- *cypress-checkout-test2-e2e-checkout-journey-spec*
 
 https://user-images.githubusercontent.com/3204581/203673150-3b41a1c1-4a35-4115-8901-07a6696a4715.mp4
 
