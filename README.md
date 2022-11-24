@@ -11,7 +11,7 @@ This repo contains Cypress tests for login and a cart checkout journey with the 
 - Choosing *age* option from a dropdown selection.
 - *Increasing the quantity* of items.
 - Proceeding to the *cart*.
-- Asserting and verifying items added to cart in the checkout cart for: 
+- Asserting and verifying items added to cart in the checkout cart for:
   - *correct items*
   - *options selected*
   - *quantities*
@@ -36,6 +36,11 @@ This repo contains Cypress tests for login and a cart checkout journey with the 
 1. Clone this repository or download the zip and extract it.
 2. Go to the extracted *testdata* file: `cypress/fixtures/testdata.json` to view the *testdata*.
 3. Open your terminal to the root directory of the project *(cypress-checkout-test)* and run `npm install` command in the terminal/cli to install all dev dependencies.
+
+Expected (Successful) - `npm install` terminal output sample:
+
+![Expected (Successful) - `npm install` terminal output sample](npm-install-expected.jpg)
+
 4. Run `npm run {script option}` to execute the tests in the cli:
 - `npm run testWithBrowser`: To run the tests headed *(with a browser)* in the Cypress default *Electron* browser.
 - `npm run testWithChrome`: To run the tests headed *(with a browser)* in Chrome.
@@ -79,7 +84,7 @@ https://user-images.githubusercontent.com/3204581/203673150-3b41a1c1-4a35-4115-8
 
 6. Successful Run sample in [Cypress Cloud](https://cloud.cypress.io)
 
-TODO: Cypress-Cloud.jpg here 
+TODO: Cypress-Cloud.jpg here
 
 ![Test run reported in Cypress Cloud dashboard](Cypress-Cloud.jpg)
 
