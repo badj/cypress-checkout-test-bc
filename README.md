@@ -1,4 +1,5 @@
-# E-commerce Checkout Test to showcase [Cypress.io](https://www.cypress.io/) as a Test Framework
+# E-commerce Checkout Test showcasing [Cypress.io](https://www.cypress.io/) as a Test Framework
+
 This repo contains Cypress tests for login and cart checkout assertions with the ["Test Automation e-commerce store"](https://testautomation.bigcartel.com/) to showcase the Cypress Test Framework.
 
 ## Project information
@@ -41,15 +42,19 @@ This repo contains Cypress tests for login and cart checkout assertions with the
 ## Expected (Successful - Retried - Skipped) test run samples:
 
 1. Successful Run with `testWithBrowserNoExit`- Cart checkout page in Cypress runner with Electron browser:
-TODO:
+
 ![Cart checkout page in Cypress Electron browser runner with no testWithBrowserNoExit npm run](Cypress_Electron_runner_cart_page.jpg)
 
 2. Successful Run with `testHeadless` - Terminal/CLI with test results output:
 
 ![Successful run from Terminal with passed test results output](terminal_cypress1.jpg)
+
 ![Successful run from Terminal with passed test results output](terminal_cypress2.jpg)
+
 ![Successful run from Terminal with passed test results output](terminal_cypress3.jpg)
+
 ![Successful run from Terminal with passed test results output](terminal_cypress4.jpg)
+
 ![Successful run from Terminal with passed test results output](terminal_cypress5.jpg)
 
 3. Successful Run - Cypress Test Results from the HTML report with passed test results output:
@@ -58,18 +63,20 @@ TODO:
 
 4. Successful Run - Video recordings with no failures *(no test retry)*
 
-- *cypress-checkout-test3-all-tests-in-1-spec*
+- *cypress-checkout-test3-all-tests-in-1-spec.cy*
 
-TODO: Upload cypress-checkout-test3-all-tests-in-1-spec.cy.js.mp4 here
+https://user-images.githubusercontent.com/3204581/203672678-b5509689-fae0-4e53-a980-c43bc7a5c4a2.mp4
 
 5. Successful Run - Video recording with *failed tests retried*
 
-- *cypress-checkout-test2-e2e-checkout-journey-spec- no test set to skip*
+- *cypress-checkout-test2-e2e-checkout-journey-spec*
 
-TODO: Upload cypress-checkout-test2-e2e-checkout-journey-spec.cy.js.mp4 here
+https://user-images.githubusercontent.com/3204581/203672395-047c02b2-ac41-4a4d-91f9-3501968dbc35.mp4
 
 6. Successful Run in [Cypress Cloud](https://cloud.cypress.io)
-TODO: Cypress-Cloud.jpg here
+
+TODO: Cypress-Cloud.jpg here 
+
 ![Test run reported in Cypress Cloud dashboard](Cypress-Cloud.jpg)
 
 ## Gotchas
@@ -89,9 +96,7 @@ Npm install : FetchError: request to http://registry.npmjs.org/... failed, reaso
 2. Cart page empty on view cart - required the e2e `experimentalSessionAndOrigin` to be set to `false` in *config.js*
 
 ```js
-// *****************************************************************************
-// Extract from cypress.config.js (already configured by default)
-// *****************************************************************************
+// Extract from cypress.config.js (this is already configured by default)
 e2e: {
   experimentalSessionAndOrigin: false
 }
