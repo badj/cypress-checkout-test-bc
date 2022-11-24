@@ -15,7 +15,7 @@ describe('E-commerce store - Add to cart journey - Checkout cart contains correc
 //  }
 //},
 () => {
-  it('TEST EXPECTED TO FAIL TO DEMO TEST RETRY!', () => {
+  it('TEST EXPECTED TO FAIL - DEMO FOR FAILED TEST RETRY!', () => {
     // *************************************************************************
     // Enter item search keyword in the search bar
     // *************************************************************************

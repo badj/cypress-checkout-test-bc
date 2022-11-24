@@ -41,12 +41,12 @@ Expected (Successful) - `npm install` terminal output sample:
 
 ![Expected (Successful) - `npm install` terminal output sample](npm-install-expected.jpg)
 
-4. Run `npm run {script option}` to execute the tests in the cli:
+4. Execute test from cli with `npx cypress run` *(will run headless)* or with configured script options `npm run {script option}`:
 - `npm run testWithBrowser`: To run the tests headed *(with a browser)* in the Cypress default *Electron* browser.
 - `npm run testWithChrome`: To run the tests headed *(with a browser)* in Chrome.
 - `npm run testWithFF`: To run the tests headed *(with a browser)* in Firefox.
 - `npm run testHeadless`: To run the tests headless *(without a browser)*.
-- `npm run testWithBrowserNoExit`: To run the tests headed and the Cypress runner will remain open after the test run completed *(Test run video will keep recording until Cypress runner is closed/killed!)*.
+- `npm run testWithBrowserNoExit`: To run the tests headed and the Cypress runner - will remain open after the test run *(NOTE: Test run video recording will keep recording until Cypress runner is closed/killed!)*.
 5. When the test run completed:
 - A *Test results report* will be generated in the `cypress/reports/result.html/index.html` path.
 - All *Video recordings of the runs* will be generated in the `cypress/videos/` path.

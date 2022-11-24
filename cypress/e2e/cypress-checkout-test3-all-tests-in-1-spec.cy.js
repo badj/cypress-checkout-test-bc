@@ -15,7 +15,7 @@ describe('E-commerce store - Add to cart journey - Checkout cart contains correc
 //  }
 //},
 () => {
-  it.skip('NOT IMPLEMENTED- DEMO FOR TEST SKIP! Log into E-commerce store to verify valid login credentials to be used for the cart journey test',  () => {
+  it.skip('NOT IMPLEMENTED - DEMO FOR TEST SKIP! Log into E-commerce store to verify valid login credentials to be used for the cart journey test',  () => {
     // *************************************************************************
     // Login to E-commerce store
     // *************************************************************************
