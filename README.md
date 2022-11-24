@@ -1,6 +1,6 @@
 # E-commerce Checkout Test showcasing [Cypress.io](https://www.cypress.io/) as a Test Framework
 
-This repo contains Cypress tests for login and a cart checkout journey with the ["Test Automation e-commerce store"](https://testautomation.bigcartel.com/) to showcase the Cypress Test Framework.
+This repo contains Cypress tests for login *(currently unsupported)* and a cart checkout journey with the ["Test Automation e-commerce store"](https://testautomation.bigcartel.com/) to showcase the Cypress Test Framework.
 
 ## Project information
 ### This project contains two Cypress functional journey tests for multiple specs to verify:
@@ -37,7 +37,7 @@ This repo contains Cypress tests for login and a cart checkout journey with the 
 2. Go to the extracted *testdata* file: `cypress/fixtures/testdata.json` to view the *testdata*.
 3. Open your terminal to the root directory of the project *(cypress-checkout-test)* and run `npm install` command in the terminal/cli to install all dev dependencies.
 
-Expected (Successful) - `npm install` terminal output sample:
+- Expected (Successful) - `npm install` terminal output sample:
 
 ![Expected (Successful) - `npm install` terminal output sample](npm-install-expected.jpg)
 
@@ -61,13 +61,9 @@ Expected (Successful) - `npm install` terminal output sample:
 2. Successful Run sample - Terminal/CLI output:
 
 ![Successful run from Terminal with passed test results output](terminal_cypress1.jpg)
-
 ![Successful run from Terminal with passed test results output](terminal_cypress2.jpg)
-
 ![Successful run from Terminal with passed test results output](terminal_cypress3.jpg)
-
 ![Successful run from Terminal with passed test results output](terminal_cypress4.jpg)
-
 ![Successful run from Terminal with passed test results output](terminal_cypress5.jpg)
 
 3. Successful Run sample - Cypress Test Results from the HTML report with passed test results output:
@@ -82,10 +78,10 @@ https://user-images.githubusercontent.com/3204581/203672678-b5509689-fae0-4e53-a
 
 https://user-images.githubusercontent.com/3204581/203673150-3b41a1c1-4a35-4115-8901-07a6696a4715.mp4
 
-6. Run sample - [Cypress Cloud Runner](https://cloud.cypress.io) *(*requires cypress cloud key to run)*
+6. Run sample - [Cypress Cloud Runner](https://cloud.cypress.io) 
+- *(Requires cypress cloud key to run)*
 
 ![Test run reported in Cypress Cloud Runner](Cypress-Cloud.jpg)
-
 ![Test run - Test results reported in Cypress Cloud Runner](Cypress-Cloud-Test-Results.jpg)
 
 ## Gotchas
