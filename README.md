@@ -1,0 +1,108 @@
+# E-commerce Checkout Test to showcase [Cypress.io](https://www.cypress.io/) as a Test Framework
+This repo contains Cypress tests for login and cart checkout assertions with the ["Test Automation e-commerce store"](https://testautomation.bigcartel.com/) to showcase the Cypress Test Framework.
+
+## Project information
+### This project contains two Cypress functional journey tests for multiple specs to verify:
+1. E-commerce store - Checkout Journey in ["Test Automation e-commerce store"](https://testautomation.bigcartel.com/) the test steps showcase:  
+- Searching for the item in the store
+- Viewing the product from the results returned in the search
+- Choosing *colour* option from a dropdown selection
+- Choosing *age* option from a dropdown selection
+- *Increasing the quantity* of items
+- Proceeding to the *cart*
+- Asserting and verifying items added to cart in the checkout cart for: *correct items*, *options selected*, *quantities*, *cart item prices* and *cart totals*.
+
+### This project has Cypress configs and code to showcase:
+- The use of *Fixtures* with test data support.
+- The use of *Selectors* support.
+- *Screen capture* support for all passed commands.
+- *MochAwesome reporter* for test run reporing.
+- Test run *Video with compression* support.
+- *Failed test retry* support.
+- *Skipping tests* support
+- *Multiple specs* run
+
+## Pre-requisites
+1. [NodeJS installed](https://nodejs.org/en/download/).
+2. [npm installed](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/).
+
+## Setup
+1. Clone this repository or download the zip and extract it.
+2. Go to the extracted *testdata* file: `cypress/fixtures/testdata.json` to view the *testdata*.
+3. Open your terminal to the root directory of the project *(cypress-checkout-test)* and run `npm install` command in the terminal/cli to install all dev dependencies.
+4. Run `npm run {script option}` to execute the tests in the cli:
+- `npm run testWithBrowser`: To run the tests headed *(with a browser)* in the Cypress default *Electron* browser.
+- `npm run testWithChrome`: To run the tests headed *(with a browser)* in Chrome.
+- `npm run testWithFF`: To run the tests headed *(with a browser)* in Firefox.
+- `npm run testHeadless`: To run the tests headless *(without a browser)*.
+- `npm run testWithBrowserNoExit`: To run the tests headed and the Cypress runner will remain open after the test run completed *(Test run video will keep recording until Cypress runner is closed/killed!)*.
+5. When the test run completed, a *test results report* will be generated in the `cypress/reports/result.html/index.html` path.
+
+## Expected (Successful - Retried - Skipped) test run samples:
+
+1. Successful Run with `testWithBrowserNoExit`- Cart checkout page in Cypress runner with Electron browser:
+TODO:
+![Cart checkout page in Cypress Electron browser runner with no testWithBrowserNoExit npm run](Cypress_Electron_runner_cart_page.jpg)
+
+2. Successful Run with `testHeadless` - Terminal/CLI with test results output:
+
+![Successful run from Terminal with passed test results output](terminal_cypress1.jpg)
+![Successful run from Terminal with passed test results output](terminal_cypress2.jpg)
+![Successful run from Terminal with passed test results output](terminal_cypress3.jpg)
+![Successful run from Terminal with passed test results output](terminal_cypress4.jpg)
+![Successful run from Terminal with passed test results output](terminal_cypress5.jpg)
+
+3. Successful Run - Cypress Test Results from the HTML report with passed test results output:
+
+![Successful Run - Cypress Test Results HTML report with passed test results output](Cypress_Test_Results_html_report.jpg)
+
+4. Successful Run - Video recordings with no failures *(no test retry)*
+
+- *cypress-checkout-test3-all-tests-in-1-spec*
+
+TODO: Upload cypress-checkout-test3-all-tests-in-1-spec.cy.js.mp4 here
+
+5. Successful Run - Video recording with *failed tests retried*
+
+- *cypress-checkout-test2-e2e-checkout-journey-spec- no test set to skip*
+
+TODO: Upload cypress-checkout-test2-e2e-checkout-journey-spec.cy.js.mp4 here
+
+6. Successful Run in [Cypress Cloud](https://cloud.cypress.io)
+TODO: Cypress-Cloud.jpg here
+![Test run reported in Cypress Cloud dashboard](Cypress-Cloud.jpg)
+
+## Gotchas
+
+1. `npm install` Node package install hangs *for about 5 mins* then gives `ECONNRESET network error`.
+
+```js
+Npm install : FetchError: request to http://registry.npmjs.org/... failed, reason: read ECONNRESET
+```
+
+### Troubleshooting to resolve the npmjs FetchError:
+- Could be your internet connection: Hotspot/tether/connect to a reliable internet connection and re-run `npm install` to see if it still fails *or...*
+- Add a host entry for registry.npmjs.org: `ping registry.npmjs.org` to obtain the IP address then update `/etc/hosts` with the IP address E.g. `104.16.20.35 registry.npmjs.org` and re-run `npm install` *or...*
+- Run `npm config edit` and clear out the `.npmrc` file, save it and clean out the cache with `npm cache clean -f` then re-run `npm install` *or...*
+- Could be a proxy issue in your network that needs to be resolved - [*reference npm config docs to configure proxy settings*](https://docs.npmjs.com/cli/v8/using-npm/config#proxy).
+
+2. Cart page empty on view cart - required the e2e `experimentalSessionAndOrigin` to be set to `false` in *config.js*
+
+```js
+// *****************************************************************************
+// Extract from cypress.config.js (already configured by default)
+// *****************************************************************************
+e2e: {
+  experimentalSessionAndOrigin: false
+}
+```
+
+## Future work planned - *TODOs*
+
+1. Implementing Login and using a cookie to emulate logged on session state.
+2. Implement [cypress-image-compare pixel diff tests](https://www.npmjs.com/package/cypress-image-compare).
+3. [Docker](https://www.docker.com/) containerisation to package the forked ["Automation practice"](http://automationpractice.com/) app into a container allowing Cypress tests to run in and against the local docker instance.
+4. Cypress test kicked off/run with [Jenkins](https://www.jenkins.io/) or [Circle CI](https://circleci.com/).
+5. Database integration to showcase test run setups and tear downs.
+6. Create a [containerised workflow with docker and openshift](https://github.com/OBVIOCO/cypress-checkout-test/new/main?filename=.github%2Fworkflows%2Fopenshift.yml&workflow_template=deployments%2Fopenshift) Or [Azure](https://github.com/OBVIOCO/cypress-checkout-test/new/main?filename=.github%2Fworkflows%2Fazure-webapps-node.yml&workflow_template=deployments%2Fazure-webapps-node) Or [Amazon ECS](https://github.com/OBVIOCO/cypress-checkout-test/new/main?filename=.github%2Fworkflows%2Faws.yml&workflow_template=deployments%2Faws).
+7. [Improve Building the project in NodeJS with npm and grunt](https://github.com/OBVIOCO/cypress-checkout-test/new/main?filename=.github%2Fworkflows%2Fnpm-grunt.yml&workflow_template=ci%2Fnpm-grunt).

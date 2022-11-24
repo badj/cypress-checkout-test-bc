@@ -1,0 +1,20 @@
+{
+  "name": "cypresscheckouttest-bc",
+  "version": "1.0.0",
+  "description": "Cypress tests demo for login and cart checkout assertions on a Practice e-commerce store",
+  "main": "cypress.config.js",
+  "scripts": {
+    "testWithBrowser": "npx cypress run  --headed browser",
+    "testWithChrome": "npx cypress run --headed --browser chrome",
+    "testWithFF": "npx cypress run --headed --browser firefox",
+    "testHeadless": "npx cypress run",
+    "testWithBrowserNoExit": "npx cypress run  --headed browser --no-exit"
+  },
+  "author": "Jacob Badenhorst",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^10.6.0",
+    "cypress-mochawesome-reporter": "^3.2.2",
+    "cypress-xpath": "^2.0.1"
+  }
+}
