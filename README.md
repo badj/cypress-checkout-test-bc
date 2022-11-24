@@ -45,7 +45,7 @@ This repo contains Cypress tests for login and a cart checkout journey with the 
 
 ![Cart checkout page in Cypress Electron browser runner with no testWithBrowserNoExit npm run](Cypress_Electron_runner_cart_page.jpg)
 
-2. Successful Run with `testHeadless` - Terminal/CLI with test results output:
+2. Successful Run - Terminal/CLI output:
 
 ![Successful run from Terminal with passed test results output](terminal_cypress1.jpg)
 
