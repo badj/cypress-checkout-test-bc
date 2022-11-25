@@ -18,7 +18,7 @@ This repo contains Cypress tests for login *(currently unsupported)* and a cart 
   - *cart item prices*
   - *cart totals*.
 
-### This project has Cypress configs and code to showcase:
+### Cypress configs and code to showcase:
 - The use of *Fixtures* with test data support.
 - The use of *Selectors* support.
 - *Screen capture* support for all passed commands.
