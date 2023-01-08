@@ -109,7 +109,7 @@ e2e: {
 
 ## Future work planned - *TODOs*
 
-1. Implementing Login and using a cookie to emulate logged on session state *Requires an updated e-commerce store to test against*.
+1. Implementing Login and using a cookie to emulate logged on session state *(Requires an updated e-commerce store to test against)*.
 2. Implement [cypress-image-compare pixel diff tests](https://www.npmjs.com/package/cypress-image-compare).
 3. [Docker](https://www.docker.com/) containerisation to package the forked ["Automation practice"](http://automationpractice.com/) app into a container allowing Cypress tests to run in and against the local docker instance.
 4. Cypress test kicked off/run with CI/CD in:
