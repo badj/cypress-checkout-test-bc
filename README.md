@@ -51,7 +51,7 @@ This repo contains Cypress tests for login *(currently unsupported)* and a cart 
 * @testWithFF            - Run tests headed in Firefox browser
 * @testHeadless          - Run tests headless
 * @testWithBrowserNoExit - Run tests headed with the Cypress runner remaining open after the test run.
-*                        - Note: Test run video recording will keep recording until Cypress runner is closed/killed!
+*                        - Note: Test run video recording will keep recording until Cypress runner is closed/killed when @testWithBrowserNoExit option is used!
 */
 
 npm run testWithBrowser
