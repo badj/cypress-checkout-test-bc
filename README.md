@@ -41,12 +41,26 @@ This repo contains Cypress tests for login *(currently unsupported)* and a cart 
 
 ![Expected (Successful) - `npm install` terminal output sample](npm-install-expected.jpg)
 
-4. Execute all tests from the cli with `npx cypress run` *(will run headless)* or with configured script options `npm run {script option}`:
-- `npm run testWithBrowser`: To run the tests headed *(with a browser)* in the Cypress default *Electron* browser.
-- `npm run testWithChrome`: To run the tests headed *(with a browser)* in Chrome.
-- `npm run testWithFF`: To run the tests headed *(with a browser)* in Firefox.
-- `npm run testHeadless`: To run the tests headless *(without a browser)*.
-- `npm run testWithBrowserNoExit`: To run the tests headed and the Cypress runner - will remain open after the test run *(NOTE: Test run video recording will keep recording until Cypress runner is closed/killed!)*.
+4. Execute all tests from the cli with `npx cypress run` *(will run headless)* or with available script options `npm run {script option}`:
+```js
+/**
+* Available runner script options: 
+*
+* @testWithBrowser       - Run tests headed in the Cypress default Electron browser
+* @testWithChrome        - Run tests headed in Chrome browser
+* @testWithFF            - Run tests headed in Firefox browser
+* @testHeadless          - Run tests headless
+* @testWithBrowserNoExit - Run tests headed with the Cypress runner remaining open after the test run.
+*                        - Note: Test run video recording will keep recording until Cypress runner is closed/killed!
+*/
+
+npm run testWithBrowser
+npm run testWithChrome        
+npm run testWithFF
+npm run testHeadless          
+npm run testWithBrowserNoExit
+
+```
 5. When the test run completed:
 - A *Test results report* will be generated in the `cypress/reports/result.html/index.html` path.
 - All *Video recordings of the runs* will be generated in the `cypress/videos/` path.
