@@ -4,7 +4,7 @@ This repo contains Cypress tests for login *(currently unsupported)* and a cart 
 
 ## Project information
 ### This project contains two Cypress functional journey tests for multiple specs to verify:
-1. E-commerce store - Checkout Journey in ["Test Automation e-commerce store"](https://testautomation.bigcartel.com/) the test steps showcase:  
+1. E-commerce store - Checkout Journey in ["Test Automation e-commerce store"](https://testautomation.bigcartel.com/) with test steps to showcase:  
 - Searching for the item in the store.
 - Viewing the product from the results returned in the search.
 - Choosing *colour* option from a dropdown selection.
@@ -34,14 +34,14 @@ This repo contains Cypress tests for login *(currently unsupported)* and a cart 
 
 ## Setup
 1. Clone this repository or download the zip and extract it.
-2. Go to the extracted *testdata* file: `cypress/fixtures/testdata.json` to view the *testdata*.
+2. Go to the extracted *testdata* file: `cypress/fixtures/testdata.json` to view the *testdata*.*(currently unsupported)*
 3. Open your terminal to the root directory of the project *(cypress-checkout-test)* and run `npm install` command in the terminal/cli to install all dev dependencies.
 
 - Expected (Successful) - `npm install` terminal output sample:
 
 ![Expected (Successful) - `npm install` terminal output sample](npm-install-expected.jpg)
 
-4. Execute test from cli with `npx cypress run` *(will run headless)* or with configured script options `npm run {script option}`:
+4. Execute all tests from the cli with `npx cypress run` *(will run headless)* or with configured script options `npm run {script option}`:
 - `npm run testWithBrowser`: To run the tests headed *(with a browser)* in the Cypress default *Electron* browser.
 - `npm run testWithChrome`: To run the tests headed *(with a browser)* in Chrome.
 - `npm run testWithFF`: To run the tests headed *(with a browser)* in Firefox.
@@ -78,7 +78,7 @@ https://user-images.githubusercontent.com/3204581/203672678-b5509689-fae0-4e53-a
 
 https://user-images.githubusercontent.com/3204581/203673150-3b41a1c1-4a35-4115-8901-07a6696a4715.mp4
 
-6. Run sample - [Cypress Cloud Runner](https://cloud.cypress.io) 
+6. Run sample - [Cypress Cloud Runner](https://cloud.cypress.io)
 - *(Requires cypress cloud key to run)*
 
 ![Test run reported in Cypress Cloud Runner](Cypress-Cloud.jpg)
@@ -86,7 +86,7 @@ https://user-images.githubusercontent.com/3204581/203673150-3b41a1c1-4a35-4115-8
 
 ## Gotchas
 
-1. `npm install` Node package install hangs *for about 5 mins* then gives `ECONNRESET network error`.
+1. `npm install` Node package install hangs *for 5+ mins* then throws error `ECONNRESET network error`.
 
 ```js
 Npm install : FetchError: request to http://registry.npmjs.org/... failed, reason: read ECONNRESET
@@ -109,7 +109,7 @@ e2e: {
 
 ## Future work planned - *TODOs*
 
-1. Implementing Login and using a cookie to emulate logged on session state.
+1. Implementing Login and using a cookie to emulate logged on session state *Requires an updated e-commerce store to test against*.
 2. Implement [cypress-image-compare pixel diff tests](https://www.npmjs.com/package/cypress-image-compare).
 3. [Docker](https://www.docker.com/) containerisation to package the forked ["Automation practice"](http://automationpractice.com/) app into a container allowing Cypress tests to run in and against the local docker instance.
 4. Cypress test kicked off/run with CI/CD in:
