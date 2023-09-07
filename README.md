@@ -46,11 +46,11 @@ This repo contains Cypress tests for login *(currently unsupported)* and a cart 
 /**
 * Available runner script options: 
 *
-* @testWithBrowser       - Run tests headed in the Cypress default Electron browser
-* @testWithChrome        - Run tests headed in Chrome browser
-* @testWithFF            - Run tests headed in Firefox browser
-* @testHeadless          - Run tests headless
-* @testWithBrowserNoExit - Run tests headed with the Cypress runner remaining open after the test run.
+* testWithBrowser       - Run tests headed in the Cypress default Electron browser
+* testWithChrome        - Run tests headed in Chrome browser
+* testWithFF            - Run tests headed in Firefox browser
+* testHeadless          - Run tests headless
+* testWithBrowserNoExit - Run tests headed with the Cypress runner remaining open after the test run.
 *                        - Note: Test run video recording will keep recording until Cypress runner is closed/killed when @testWithBrowserNoExit option is used!
 */
 
