@@ -22,7 +22,7 @@ This repo contains Cypress tests for login *(currently unsupported)* and a cart 
 - The use of *Fixtures* with test data support.
 - The use of *Selectors* support.
 - *Screen capture* support for all passed commands.
-- *MochAwesome reporter* for test run reporing.
+- *MochAwesome reporter* for test run reporting.
 - Test run *Video with compression* support.
 - *Failed test retry* support.
 - *Skipping tests* support.
@@ -41,7 +41,7 @@ This repo contains Cypress tests for login *(currently unsupported)* and a cart 
 
 ![Expected (Successful) - `npm install` terminal output sample](npm-install-expected.jpg)
 
-4. Execute all tests from the cli with `npx cypress run` *(will run headless)* or with available script options `npm run {script option}`:
+4. Execute all tests from the CLI with `npx cypress run` *(will run headless)* or with available script options `npm run {script option}`:
 ```js
 /**
 * Available runner script options: 
@@ -123,7 +123,7 @@ e2e: {
 
 ## Future work planned - *TODOs*
 
-1. Implementing Login and using a cookie to emulate logged on session state *(Requires an updated e-commerce store to test against)*.
+1. Implementing Login and using a cookie to emulate a logged-on session state *(Requires an updated e-commerce store to test against)*.
 2. Implement [cypress-image-compare pixel diff tests](https://www.npmjs.com/package/cypress-image-compare).
 3. [Docker](https://www.docker.com/) containerisation to package the forked ["Automation practice"](http://automationpractice.com/) app into a container allowing Cypress tests to run in and against the local docker instance.
 4. Cypress test kicked off/run with CI/CD in:
