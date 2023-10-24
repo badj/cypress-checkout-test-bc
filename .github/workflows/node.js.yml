@@ -21,11 +21,18 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
+    # - name: Use Node.js ${{ matrix.node-version }}
+    - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node-version }}
+        # node-version: ${{ matrix.node-version }}
+        node-version: 16.14.0
         cache: 'npm'
+        # The action defaults to search for the dependency file
+        # (package-lock.json or yarn.lock) in the repository root, and uses
+        # its hash as a part of the cache key.
+        # https://github.com/actions/setup-node#caching-packages-dependencies
+        cache-dependency-path: "./blog/package-lock.json"
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
