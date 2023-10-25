@@ -1,12 +1,12 @@
 # E-commerce checkout journey tests showcasing the use and implementation of [__Cypress__](https://www.cypress.io/) as a __Test Framework__
 
-> This repo contains Cypress tests for an e-commerce store checkout journey with the [__"Test Automation e-commerce store"__](https://testautomation.bigcartel.com/) to showcase the Cypress Test Framework
+> This repo contains Cypress tests for an e-commerce store checkout journey with the [__"Test Automation - Big cartel e-commerce test store"__](https://testautomation.bigcartel.com/) to showcase the Cypress Test Framework
 
 ## Project information
 
 ### This project contains two Cypress functional journey tests for multiple specs to verify:
 
-> E-commerce store - Checkout Journey executed on the [__"Test Automation e-commerce store"__](https://testautomation.bigcartel.com/) with test steps to showcase:  
+> E-commerce store - Checkout Journey executed on the [__"Test Automation - Big cartel e-commerce test store"__](https://testautomation.bigcartel.com/) with test steps to showcase:  
 
 - Searching for the item in the store
 - Viewing the product from the results returned in the search
