@@ -50,7 +50,7 @@
 4. Execute all tests from the CLI with `npx cypress run` *(will run headless)* or with available script options `npm run {script option}`:
 ```js
 /**
-* Available runner script options: 
+* Available npm runner script options: 
 *
 * testWithBrowser       - Run tests headed in the Cypress default Electron browser
 * testWithChrome        - Run tests headed in Chrome browser
@@ -65,6 +65,14 @@ npm run testWithChrome
 npm run testWithFF
 npm run testHeadless          
 npm run testWithBrowserNoExit
+
+/**
+* Available npx cypress runner  options: 
+*
+* npx cypress run --headed --browser [installed browser name: chrome/firefox/edge/safari]
+*/
+
+npx cypress run --headed --browser edge
 
 ```
 5. When the test run completed:
@@ -106,25 +114,57 @@ https://user-images.githubusercontent.com/3204581/203673150-3b41a1c1-4a35-4115-8
 
 ## Gotchas
 
-1. `npm install` Node package install hangs *for 5+ mins* then throws error `ECONNRESET network error`
+#### 1. `npm install` __Node package install hangs *for 5+ mins* then throws error__ `ECONNRESET network error`
 
 ```js
 Npm install : FetchError: request to http://registry.npmjs.org/... failed, reason: read ECONNRESET
 ```
 
-### Troubleshooting to resolve the npm js FetchError:
+__Troubleshooting to resolve the npm js FetchError__
 - Could be your internet connection: Hotspot/tether/connect to a reliable internet connection and re-run `npm install` to see if it still fails *or...*
 - Add a host entry for registry.npmjs.org: `ping registry.npmjs.org` to obtain the IP address then update `/etc/hosts` with the IP address E.g. `104.16.20.35 registry.npmjs.org` and re-run `npm install` *or...*
 - Run `npm config edit` and clear out the `.npmrc` file, save it and clean out the cache with `npm cache clean -f` then re-run `npm install` *or...*
 - Could be a proxy issue in your network that needs to be resolved - [*reference npm config docs to configure proxy settings*](https://docs.npmjs.com/cli/v8/using-npm/config#proxy)
 
-2. Cart page empty on view cart - required the e2e `experimentalSessionAndOrigin` to be set to `false` in *config.js*:
+#### 2. __Cart page empty on view cart__
 
+- required the e2e `experimentalSessionAndOrigin` to be set to `false` in *config.js*
+  
 ```js
 // Extract from cypress.config.js (this is already configured by default)
 e2e: {
   experimentalSessionAndOrigin: false
 }
+```
+
+#### 3. __Remove output folder errors__
+
+```js
+// The error we received was: Error: EACCES: permission denied
+
+Remove output folder /Users/user_folder_here/Documents/Code/cypress-checkout-test-bc/cypress/reports/result.html
+An error was thrown in your plugins file while executing the handler for the before:run event.
+The error we received was: Error: EACCES: permission denied,
+rmdir '/Users/user_folder_here/Documents/Code/cypress-checkout-test-bc/cypress/reports/result.html' account_user_name_here cypress-checkout-test-bc % 
+
+// We failed to trash the existing run results...."DS_Store" couldn't be moved to the trash because you don't have permission to access it.
+
+We failed to trash the existing run results. This error will not affect or change the exit code.
+Error: Command failed: /Users/user_folder_here/Library/Caches/Cypress/13.6.2/Cypress.app/Contents/Resources/app/node_modules/trash/lib/macos-trash /Users/user_folder_here/Documents/Code/cypress-checkout-test-bc/cypress/screenshots/.DS_Store ".DS_Store" couldn't be moved to the trash because you don't have permission to access it.
+at ChildProcess.exithandler (node:child_process:430:12) at ChildProcess.emit (node:events:513:28)
+at maybeClose (node:internal/child_process:1091:16) at Socket. (node:internal/child_process:449:11)
+at Socket.emit (node:events:513:28) at Pipe. (node:net:322:12)
+
+```
+__Resolving the permission denied Errors__
+
+- `chmod` the cypress folder and provide read and write access
+
+```js
+// chmod the cypress project folder:
+sudo chmod -R 775 /Users/user_folder_here/Documents/Code/cypress-checkout-test-bc/cypress/
+// chmod the Application Support Cypress folder:
+sudo chmod -R 775 /Users/user_folder_here/Library/Application\ Support/Cypress
 ```
 
 ## Future work planned - *TODOs*
