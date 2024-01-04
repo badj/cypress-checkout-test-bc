@@ -69,7 +69,7 @@ npm run testWithBrowserNoExit
 /**
 * Available npx cypress runner  options: 
 *
-* npx cypress run --headed --browser [installed browser name: chrome/firefox/edge/safari]
+* npx cypress run --headed --browser [installed browser name: chrome/firefox/edge]
 */
 
 npx cypress run --headed --browser edge
