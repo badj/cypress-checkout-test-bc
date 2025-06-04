@@ -33,7 +33,6 @@
 - __Multiple specs__ run
 - __[GitHub workflow support](https://github.com/badj/cypress-checkout-test-bc/actions)__ with __[actions triggering on push/pull request to main and daily scheduled runs](.github/workflows/main.yml)__
 
-
 ## Pre-requisites
 
 1. [__NodeJS installed__](https://nodejs.org/en/download/)
