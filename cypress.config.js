@@ -1,7 +1,8 @@
 
 module.exports = {
   projectId: "q6bkts",
-  video: true, // Set to false to diable video recording of the test run
+  reporter: 'cypress-mochawesome-reporter',
+  video: true, // Set to false to disable video recording of the test run
   videoCompression: 40, // Disable for video not to be compressed and decrease to improve video quality
   reporterOptions: {
     reportDir: 'cypress/reports/result.html',
@@ -20,7 +21,7 @@ module.exports = {
     // *************************************************************************
     // Retry enabled globally - to retry all failing tests
     // Disable this and move to individual test or specs to enable retry per
-    // test or a spec only. This will retry a failed test once when it failed
+    // test or a spec only. This will retry a failed test (1 retry)  when it fails
     // NOTE: Increase runMode int to increase test retries
     // *************************************************************************
     retries: {
