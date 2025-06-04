@@ -2,7 +2,7 @@ name: Cypress Tests in Docker
 
 on:
   push:
-    branches: [ main, github-actions-tom-tutorial ]
+    branches: [ main]
   pull_request:
 
 jobs:
