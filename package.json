@@ -13,8 +13,8 @@
   "author": "Jacob Badenhorst",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^10.6.0",
-    "cypress-mochawesome-reporter": "^3.2.2",
+    "cypress": "^14.4.1",
+    "cypress-mochawesome-reporter": "^3.8.2",
     "cypress-xpath": "^2.0.1"
   }
 }
