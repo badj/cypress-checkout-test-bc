@@ -50,6 +50,7 @@
 ![Expected (Successful) - `npm install` terminal output sample](npm-install-expected.jpg)
 
 4. Execute all tests from the CLI with `npx cypress run` *(will run headless)* or with available script options `npm run {script option}`:
+
 ```js
 /**
 * Available npm runner script options: 
@@ -112,9 +113,10 @@ https://user-images.githubusercontent.com/3204581/203673150-3b41a1c1-4a35-4115-8
 - [*Requires cypress cloud key to run*](https://docs.cypress.io/faq/questions/cloud-faq)
 
 ![Test run reported in Cypress Cloud Runner](Cypress-Cloud.jpg)
+
 ![Test run - Test results reported in Cypress Cloud Runner](Cypress-Cloud-Test-Results.jpg)
 
-7. __Run samples/artifacts available for [GitHub workflows](https://github.com/badj/cypress-checkout-test-bc/actions) with [actions triggering on push/pull request to main and daily scheduled runs](.github/workflows/main.yml)__
+7. __Run samples/artifacts available for__ [GitHub workflows](https://github.com/badj/cypress-checkout-test-bc/actions) __with__ [actions triggering on push/pull request to main and daily scheduled runs](.github/workflows/main.yml)
 
 ![Cypress Tests run with GitHub Action with a Docker image](Cypress_Tests_GA_with_Docker.jpg)
 
@@ -173,9 +175,8 @@ sudo chmod -R 775 /Users/user_folder_here/Documents/Code/cypress-checkout-test-b
 sudo chmod -R 775 /Users/user_folder_here/Library/Application\ Support/Cypress
 ```
 
-## Future work planned - *TODO's*
+## Future work planned - *TODOs*
 
 1. Implementing Login using a cookie to emulate a test start from a logged-in session state *(May require an updated e-commerce store to test against)*
 2. Implement [cypress-image-compare pixel diff tests](https://www.npmjs.com/package/cypress-image-compare)
 3. Database integration to showcase test run setups and tear-downs
-4. Improve Building the project in NodeJS with npm and grunt
