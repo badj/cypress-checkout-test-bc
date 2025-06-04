@@ -19,7 +19,8 @@ jobs:
             -v ${{ github.workspace }}:/e2e \
             -w /e2e \
             -e CYPRESS_baseUrl=https://testautomation.bigcartel.com \
-            cypress/included:13.3.2
+            cypress/included:13.3.2 \
+            /bin/sh -c "npm ci && npx cypress run"
 
       - name: Upload Cypress test results
         if: always()
