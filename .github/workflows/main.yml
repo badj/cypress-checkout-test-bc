@@ -1,0 +1,36 @@
+name: Cypress Tests in Docker
+
+on:
+  push:
+    branches: [ main, github-actions-tom-tutorial ]
+  pull_request:
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: |
+          docker build -t cypress-test -f Dockerfile .
+
+      - name: Run Cypress tests in Docker
+        run: |
+          docker run --rm \
+            -v ${{ github.workspace }}:/e2e \
+            -w /e2e \
+            -e CYPRESS_baseUrl=https://testautomation.bigcartel.com \
+            cypress/included:13.3.2
+
+      - name: Upload Cypress test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-results
+          path: |
+            cypress/reports/result.html
+            cypress/videos
+            cypress/screenshots
