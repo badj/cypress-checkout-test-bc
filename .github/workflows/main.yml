@@ -21,7 +21,7 @@ jobs:
           -e CYPRESS_baseUrl=https://testautomation.bigcartel.com \
           --entrypoint /bin/sh \
           cypress/included:13.3.2 \
-          -c "npm ci && npx cypress run"
+          -c "npm install && npx cypress run"
 
       - name: Upload Cypress test results
         if: always()
