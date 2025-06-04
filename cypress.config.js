@@ -1,7 +1,6 @@
 
 module.exports = {
   projectId: "q6bkts",
-  reporter: 'cypress-mochawesome-reporter',
   video: true, // Set to false to diable video recording of the test run
   videoCompression: 40, // Disable for video not to be compressed and decrease to improve video quality
   reporterOptions: {
