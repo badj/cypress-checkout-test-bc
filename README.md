@@ -1,6 +1,6 @@
 # E-commerce checkout journey tests showcasing the use and implementation of [__Cypress__](https://www.cypress.io/) as a __Test Framework__
 
-> This repo contains Cypress tests for an e-commerce store checkout journey with the [__"Test Automation - Big Cartel E-commerce Test store"__](https://testautomation.bigcartel.com/) to showcase the Cypress Test Framework
+> This repo contains Cypress tests for an e-commerce store checkout journey with the [__"Test Automation - Big Cartel E-commerce Test store"__](https://testautomation.bigcartel.com/) to showcase the Cypress Test Framework running locally or with Docker via GitHub Actions and Cypress Cloud. 
 
 ## Project information
 
@@ -31,13 +31,15 @@
 - __Failed test retry__ support
 - __Skipping tests__ support
 - __Multiple specs__ run
+- __[GitHub workflow support](https://github.com/badj/cypress-checkout-test-bc/actions)__ with __[actions triggering on push/pull request to main and daily scheduled runs](.github/workflows/main.yml)__
+
 
 ## Pre-requisites
 
 1. [__NodeJS installed__](https://nodejs.org/en/download/)
 2. [__npm installed__](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/)
 
-## Setup to run the test suite
+## Setup to run the test suite locally
 
 1. Clone this repository or download the zip and extract it
 2. Go to the extracted [__test data__](cypress/fixtures/testdata.json) file: `cypress/fixtures/testdata.json` to view the *test data* *(current e-commerce store not supported/not implemented)*
@@ -112,6 +114,10 @@ https://user-images.githubusercontent.com/3204581/203673150-3b41a1c1-4a35-4115-8
 ![Test run reported in Cypress Cloud Runner](Cypress-Cloud.jpg)
 ![Test run - Test results reported in Cypress Cloud Runner](Cypress-Cloud-Test-Results.jpg)
 
+7. __Run samples/artifacts available for [GitHub workflows](https://github.com/badj/cypress-checkout-test-bc/actions) with [actions triggering on push/pull request to main and daily scheduled runs](.github/workflows/main.yml)__
+
+![Cypress Tests run with GitHub Action with a Docker image](Cypress_Tests_GA_with_Docker.jpg)
+
 ## Gotchas
 
 #### 1. `npm install` __Node package install hangs *for 5+ mins* then throws error__ `ECONNRESET network error`
@@ -167,17 +173,9 @@ sudo chmod -R 775 /Users/user_folder_here/Documents/Code/cypress-checkout-test-b
 sudo chmod -R 775 /Users/user_folder_here/Library/Application\ Support/Cypress
 ```
 
-## Future work planned - *TODOs*
+## Future work planned - *TODO's*
 
 1. Implementing Login using a cookie to emulate a test start from a logged-in session state *(May require an updated e-commerce store to test against)*
 2. Implement [cypress-image-compare pixel diff tests](https://www.npmjs.com/package/cypress-image-compare)
-3. __Containerisation__ for a containerised __demo e-commerce shop__ and  a __Cypress Docker/Kubernetes__ instance(s):
-- Create a [containerised workflow with docker](https://www.docker.com/) or
-- Azure or
-- AWS/Amazon
-4. Cypress test kick-off/run with CI/CD in:
-- [GitHub Actions](https://docs.cypress.io/guides/continuous-integration/github-actions#What-you-ll-learn) or
-- [Jenkins](https://www.jenkins.io/) or
-- [Circle CI](https://circleci.com/)
-5. Database integration to showcase test run setups and tear-downs
-6. Improve Building the project in NodeJS with npm and grunt
+3. Database integration to showcase test run setups and tear-downs
+4. Improve Building the project in NodeJS with npm and grunt
